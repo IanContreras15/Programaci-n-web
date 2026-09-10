@@ -1,0 +1,208 @@
+
+:root {
+    --color-principal: #9F5B34;
+    --color-principal-hover: #834726;
+    --color-texto-oscuro: #333333;
+    --color-gris-neutro: #737877;
+    --fondo-principal: #f0f2f2;
+    --fondo-tarjeta: #ffffff;
+    --fondo-encabezado: #f8f9f9;
+    --fuente-titulos: 'Work Sans', sans-serif;
+    --fuente-cuerpo: 'Work Sans', sans-serif;
+    --fuente-etiquetas: 'JetBrains Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    background-color: var(--fondo-principal);
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--fondo-encabezado);
+    padding: 15px 40px;
+    border-radius: 8px 8px 0 0;
+}
+
+.logo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-principal);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-texto-oscuro);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--color-principal);
+}
+
+.nav-links .btn-login {
+    background-color: var(--color-principal);
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.nav-links .btn-login:hover {
+    background-color: var(--color-principal-hover);
+    color: #ffffff;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f9f9;
+    padding: 60px 40px;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #111111;
+}
+
+.hero-content p {
+    color: var(--color-gris-neutro);
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-principal);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-principal-hover);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.services {
+    background-color: var(--fondo-principal);
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.services h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    color: var(--color-principal);
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: var(--fondo-tarjeta);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 160px;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111111;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
